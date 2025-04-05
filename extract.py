@@ -1,6 +1,6 @@
-def extractPdfTexts(path_to_pdf):
-    from PyPDF2 import PdfReader
+from PyPDF2 import PdfReader
 
+def extractPdfTexts(path_to_pdf):
     #extract PDF texts
     reader = PdfReader(path_to_pdf)
     page = ""
@@ -10,5 +10,9 @@ def extractPdfTexts(path_to_pdf):
         page = page + pdfText
 
     return str(page)
+
+def extract(path_to_file):
+    file = open(path_to_file, "r")
+    return str(file)
 
 #print(extractPdfTexts("files/Desain Karakter Shin Ultraman Telah Terungkap.pdf"))
