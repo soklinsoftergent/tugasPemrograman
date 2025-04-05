@@ -47,4 +47,4 @@ def normalisasi(text):
             split_words = split_conjoined(token)  
             final_tokens.extend(stemmer.stem(w) for w in split_words if w in indo_words)
 
-    return " ".join(final_tokens)
+    return final_tokens
