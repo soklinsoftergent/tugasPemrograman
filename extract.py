@@ -12,7 +12,7 @@ def extractPdfTexts(path_to_pdf):
     return str(page)
 
 def extract(path_to_file):
-    file = open(path_to_file, "r")
-    return str(file)
+    with open(path_to_file, "r", encoding="utf-8") as file:
+        return file.read()
 
 #print(extractPdfTexts("files/Desain Karakter Shin Ultraman Telah Terungkap.pdf"))
